@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\imagefilters">
+      <UniqueIdentifier>{a56d39d4-d6fc-48c1-83d8-ceaa10f4850a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\imagefilters\shaders">
+      <UniqueIdentifier>{35311a40-571e-4e52-9801-be64e5a532d9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ImageFiltersApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ImageFiltersApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\BaseShader.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Bleach.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Bloom.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Brcosa.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\BrightnessContrast.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\ColorHalftone.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\ColorMatrix.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\DotScreen.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\FishEye.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\HueSaturation.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\ImageFiltersFactory.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Kaleidoscope.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Lut.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Noise.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Pixelate.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Sepia.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Swirl.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Vibrance.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\ImageFiltersFactory.h">
+      <Filter>Source Files\imagefilters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\Glitch.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
