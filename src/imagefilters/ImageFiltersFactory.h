@@ -18,6 +18,7 @@
 #include "BrightnessContrast.h"
 #include "ColorMatrix.h"
 #include "Glitch.h"
+#include "ColorBalance.h"
 
 namespace shaders
 {	
@@ -29,6 +30,7 @@ namespace shaders
 			enum FilterType
 			{
 				PIXELATE,
+				COLOR_BALANCE,
 				HUE_SATURATION,
 				SEPIA,
 				NOISE,
@@ -42,6 +44,7 @@ namespace shaders
 				BRCOSA,
 				//FISH_EYE,
 				BRIGHTNESS_CONTRAST,
+				
 				//COLOR_MATRIX,
 				//GLITCH,
 				_NULL
@@ -59,6 +62,7 @@ namespace shaders
 
 				switch(id)
 				{
+					case COLOR_BALANCE:			shader = ColorBalanceRef(new ColorBalance(1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f)); break;
 					case PIXELATE:				shader = PixelateRef(new Pixelate(Vec2f(100.0f, 100.0f))); break;
 					case HUE_SATURATION:		shader = HueSaturationRef(new HueSaturation(0.5f, 0.5f)); break;
 					case SEPIA:					shader = SepiaRef(new Sepia(0.5f)); break;

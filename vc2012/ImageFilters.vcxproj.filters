@@ -95,6 +95,9 @@
     <ClInclude Include="..\src\imagefilters\shaders\Glitch.h">
       <Filter>Source Files\imagefilters\shaders</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\imagefilters\shaders\ColorBalance.h">
+      <Filter>Source Files\imagefilters\shaders</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">

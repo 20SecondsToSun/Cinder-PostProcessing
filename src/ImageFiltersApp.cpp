@@ -2,8 +2,8 @@
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
-#include "BaseShader.h"
-#include "ImageFiltersFactory.h"
+#include "imagefilters/shaders/BaseShader.h"
+#include "imagefilters/ImageFiltersFactory.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -28,12 +28,21 @@ public:
 
 	ImageFiltersFactory filtersFactory;
 	BaseShaderRef shader;
+
+	void fileDrop(FileDropEvent event);
 };
 
 void ImageFiltersApp::setup()
 {
 	setWindowSize(1200, 650);
-	texture = gl::Texture(loadImage(loadAsset("fc.jpg")));
+	try {
+		texture = gl::Texture(loadImage(loadAsset("fc.jpg")));
+	}
+	catch (...)
+	{
+
+	}
+	
 
 	params = params::InterfaceGl::create(app::getWindow(), "Params", app::toPixels(ci::Vec2i(300, 400)));	
 	shader = filtersFactory.get(ImageFiltersFactory::NOISE, params);
@@ -69,10 +78,21 @@ void ImageFiltersApp::update()
 	
 }
 
+void ImageFiltersApp::fileDrop(FileDropEvent event)
+{
+	try {
+		gl::TextureRef	mTexture = gl::Texture::create(loadImage(event.getFile(0)));
+		texture = *mTexture.get();
+	}
+	catch (...) {
+		console() << "unable to load the texture file!" << std::endl;
+	};
+}
+
 void ImageFiltersApp::draw()
 {
 	gl::clear(Color::white()); 
-	
+	if(texture)
 	shader->render(Surface(texture));
 	params->draw();
 }
